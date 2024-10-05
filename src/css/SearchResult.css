@@ -1,0 +1,16 @@
+#searchResult {
+    color: white;
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 2rem 0 0 0;
+    }
+
+    #searchCardContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+}

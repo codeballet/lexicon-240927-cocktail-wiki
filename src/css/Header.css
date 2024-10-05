@@ -1,0 +1,130 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-purple-darker);
+
+    position: fixed;
+    z-index: 1;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header-title {
+        color: white;
+
+        font-size: clamp(1rem, calc(18vw / 3), 2rem);
+
+        margin-left: 1rem;
+        margin-top: 0.75rem;
+
+        @media (max-width: 700px) {
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            list-style-type: none;
+            li {
+                a.active > * {
+                    background-color: var(--color-purple-darkest);
+                }
+            }
+    
+            a > * {
+                color: white;
+    
+                min-width: 7rem;
+                padding: 1.125rem 1rem 0.625rem;
+    
+                border-bottom: 0.25rem var(--color-purple-dark) solid;
+                transition: all 0.2s;
+    
+                &:hover {
+                    color: #a4abff;
+                    background-color: var(--color-purple-darkest);
+                    padding: 0.875rem 1rem 0.875rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        display: flex;
+
+        > a {
+            display: none;
+        }
+
+        #hamburger {
+            width: 100%;
+
+            > a {
+                vertical-align: super;
+                margin-bottom: 0.5rem;
+                text-align: end;
+
+                #header-title {
+                    display: inline-flex;
+                }
+            }
+
+            #navbar {
+                display: contents;
+
+                ul {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    #navbar {
+        display: none;
+    }
+}
+
+@media (max-width: 250px) {
+    header {
+        #hamburger {
+            #navbar {
+                font-size: 12px;
+            }
+
+            > button {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 200px) {
+    header {
+        #hamburger {
+            > a #header-title {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 401px) {
+    nav button {
+        display: none;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #navbar {
+        display: block;
+    }
+}

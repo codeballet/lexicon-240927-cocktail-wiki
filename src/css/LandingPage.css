@@ -1,0 +1,17 @@
+#landingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #randomDrinkButton {
+        margin-top: 2rem;
+    }
+
+    .spinner-wrapper {
+        margin-top: 7rem;
+    }
+
+    .drinkCard {
+        width: clamp(10rem, 80vw, 30rem);
+    }
+}

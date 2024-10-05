@@ -1,0 +1,35 @@
+#searchFilters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    #alcoholicFilterInput,
+    #alcoholicFilterLabel {
+        cursor: pointer;
+    }
+
+    #alcoholicFilterInput {
+        margin-right: 1rem;
+        width: 1.2rem;
+        aspect-ratio: 1/1;
+    }
+
+    #alcoholicFilterLabel {
+        color: white;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    #searchFilters {
+        #alcoholicFilterInput,
+        #alcoholicFilterLabel {
+            align-self: flex-start;
+        }
+
+        #alcoholicFilterInput {
+            margin-top: 0.4rem;
+        }
+    }
+}
